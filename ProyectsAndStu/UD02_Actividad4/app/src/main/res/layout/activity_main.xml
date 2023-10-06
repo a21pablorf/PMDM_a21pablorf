@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     >
 
     <LinearLayout
@@ -11,6 +12,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
+
         >
         <ImageView
             android:layout_width="100dp"
@@ -18,22 +20,61 @@
             android:src="@drawable/profile"
             />
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Juan Perez"
-            android:padding="12dp"
-            android:textSize="25dp"
-            android:textColor="@color/black"
-            />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="left"
+            android:padding="15dp"
+            >
+            <TextView
+                android:id="@+id/cajaTextoJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Juan Perez"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="653459821"
+
+                />
+        </LinearLayout>
 
         <Button
+            android:id="@+id/boton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-
+            android:text="Llamar"
+            android:layout_marginLeft="20dp"
+            android:background="@color/purple_500"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            />
 
     </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/salida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="" />
+
+    </LinearLayout>
+
 
 
 </LinearLayout>
