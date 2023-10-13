@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:gravity="center"
+        tools:ignore="Orientation">
+
+        <ImageView
+            android:id="@+id/ourense"
+            android:layout_width="535dp"
+            android:layout_height="246dp"
+            android:layout_gravity="top"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ourense" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Ourense"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+    <ImageView
+        android:id="@+id/santiago"
+        android:layout_width="match_parent"
+        android:layout_height="271dp"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/catedral" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/salida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
