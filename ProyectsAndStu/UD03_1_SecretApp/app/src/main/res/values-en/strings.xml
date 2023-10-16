@@ -7,4 +7,6 @@
     <string name="next">Next</string>
     <string name="encrypt_text">Here is your encrypted message</string>
     <string name="message_text">Please enter your message</string>
+    <string name="secret_message">Please, enter your secret message</string>
+    <string name="btn_next">Next</string>
 </resources>
