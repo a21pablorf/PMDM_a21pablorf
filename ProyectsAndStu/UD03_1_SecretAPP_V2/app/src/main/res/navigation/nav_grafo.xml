@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_grafo"
+    app:startDestination="@id/welcomeFragment3">
+    <fragment
+        android:id="@+id/welcomefragment"
+        android:name="com.example.ud03_1_secretapp_v2.WelcomeFragment"
+        android:label="WelcomeFragment">
+        <action
+            android:id="@+id/action_nav_grafo_to_messageFragment2"
+            app:destination="@id/messageFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageFragment2"
+        android:name="com.example.ud03_1_secretapp_v2.MessageFragment"
+        android:label="MessageFragment" />
+</navigation>
