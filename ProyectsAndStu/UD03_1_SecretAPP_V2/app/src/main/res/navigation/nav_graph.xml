@@ -18,7 +18,8 @@
         android:label="MessageFragment" >
         <action
             android:id="@+id/action_messageFragment2_to_encryptFragment"
-            app:destination="@id/encryptFragment" />
+            app:destination="@id/encryptFragment"
+            app:popUpTo="@id/welcomefragment" />
     </fragment>
     <fragment
         android:id="@+id/encryptFragment"

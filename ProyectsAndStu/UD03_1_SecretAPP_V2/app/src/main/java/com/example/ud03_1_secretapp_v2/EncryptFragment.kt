@@ -27,12 +27,14 @@ class EncryptFragment : Fragment() {
     fun cifrado(texto: String): String{
         var cifrado: List<Int>
         cifrado=texto.map { it.uppercaseChar()
-            .code.minus(61)
-            .mod(26).plus(64)
-
+            .code.minus('A'.code)
+            .plus(3)
+            .mod(26)
+            .plus('A'.code)
         }
 
         return cifrado.map { it.toChar() }.toString()
+
     }
 
 }
