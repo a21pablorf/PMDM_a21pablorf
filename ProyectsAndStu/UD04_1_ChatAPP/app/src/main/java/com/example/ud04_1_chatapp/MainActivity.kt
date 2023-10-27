@@ -5,21 +5,43 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var toolbar=findViewById<MaterialToolbar>(R.id.toolbar)
-        supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
-        toolbar.setupWithNavController()
+        //Hacer nuestra barra , la principal
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        //Host de navegacion(grafo asociado)
+        //navHostFragment sería nuestro FragmentView(HostDeNavegacion)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        //Configuracion de la barra de navegacion
+        var builderApp = AppBarConfiguration.Builder(navController.graph)
+        var configurationApp = builderApp.build()
+        toolbar.setupWithNavController(navController, configurationApp)
+
+        //BottomBar
+        val bottomBar = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomBar.setupWithNavController(navController)
+
+        //Panel Lateral
+        val lateralPane = findViewById<DrawerLayout>(R.id.drawer_layout)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
