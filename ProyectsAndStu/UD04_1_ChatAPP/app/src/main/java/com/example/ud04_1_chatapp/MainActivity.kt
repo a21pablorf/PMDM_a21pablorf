@@ -14,6 +14,7 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +42,9 @@ class MainActivity : AppCompatActivity() {
 
         //Panel Lateral
         val lateralPane = findViewById<DrawerLayout>(R.id.drawer_layout)
+        val navigationView=findViewById<NavigationView>(R.id.nav_view)
+
+
 
     }
 
